@@ -1,0 +1,19 @@
+{
+  "name": "country-exchange-singlefile",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.80",
+    "axios": "^1.5.0",
+    "better-sqlite3": "^8.6.0",
+    "canvas": "^3.2.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
