@@ -1,7 +1,7 @@
 // index.js
 import express from "express";
 import axios from "axios";
-import Database from "better-sqlite3";
+import sqlite3 from "sqlite3";
 import { createCanvas } from "canvas";
 import fs from "fs";
 import fsPromises from "fs/promises";
@@ -20,11 +20,12 @@ const CACHE_DIR = path.join(__dirname, "cache");
 const IMAGE_PATH = path.join(CACHE_DIR, "summary.png");
 const DB_PATH = path.join(__dirname, "data.sqlite3");
 
+
+const db = new sqlite3.Database(DB_PATH);
 // create cache dir if missing
 if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR, { recursive: true });
 
 // ---- DB init (SQLite) ----
-const db = new Database(DB_PATH);
 
 // Create table if not exists. last_refreshed_at stored as ISO string text.
 db.exec(`
