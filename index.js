@@ -2,7 +2,7 @@
 import express from "express";
 import axios from "axios";
 import sqlite3 from "sqlite3";
-import { createCanvas } from "canvas";
+import { createCanvas } from "@napi-rs/canvas";
 import fs from "fs";
 import fsPromises from "fs/promises";
 import path from "path";

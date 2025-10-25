@@ -10,7 +10,6 @@
     "@napi-rs/canvas": "^0.1.80",
     "axios": "^1.5.0",
     "sqlite3": "^5.1.6",
-    "canvas": "^3.2.0",
     "express": "^4.18.2"
   },
   "devDependencies": {
